@@ -14,13 +14,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Iayoo\\": "src/"
+            "Iayoo\\MysqlLogger\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Iayoo\\": "src/"
-        }
-    },
+    "autoload-dev": {},
     "minimum-stability": "stable"
 }

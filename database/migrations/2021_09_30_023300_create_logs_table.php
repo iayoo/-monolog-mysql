@@ -1,11 +1,15 @@
 <?php
-namespace Logger;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateErrorLogs extends Migration
+dump("调用了vendor的CreateSystemErrorLogs");
+$array = debug_backtrace();
+foreach ($array as $row) {
+    dump($row['file'] . ':' . $row['line'] . '行,调用方法:' . $row['function']);
+}
+class CreateSystemErrorLogs extends Migration
 {
     /**
      * Run the migrations.
@@ -20,12 +24,15 @@ class CreateErrorLogs extends Migration
                 $table->engine = 'InnoDB';
 
                 $table->bigIncrements('id');
+                $table->string('request_uri');
                 $table->string('instance')->index();
                 $table->string('channel')->index();
                 $table->string('level')->index();
                 $table->string('level_name');
+
                 $table->longText('message');
                 $table->longText('context');
+
 
                 $table->integer('remote_addr')->nullable()->unsigned();
                 $table->string('user_agent')->nullable();
@@ -43,6 +50,6 @@ class CreateErrorLogs extends Migration
      */
     public function down()
     {
-//        Schema::drop(env('DB_LOG_TABLE', 'logs'));
+        Schema::dropIfExists(env('DB_LOG_TABLE', 'logs'));
     }
 }
