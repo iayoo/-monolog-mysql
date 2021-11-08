@@ -1,0 +1,26 @@
+{
+    "name": "iayoo/monolog-mysql",
+    "description": "MySQL driver for Monolog",
+    "keywords": ["laravel", "log", "monolog", "mysql"],
+    "homepage": "https://github.com/iayoo/monolog-mysql",
+    "authors": [
+        {
+            "name": "Iayoo",
+            "email": "vilnius94@163.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iayoo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iayoo\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
