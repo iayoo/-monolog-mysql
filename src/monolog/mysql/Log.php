@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Iayoo\monolog\mysql;
+namespace Iayoo\MysqlLogger\monolog\mysql;
 
 use Exception;
 use Monolog\Logger;

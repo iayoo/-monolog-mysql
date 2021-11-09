@@ -1,5 +1,5 @@
 <?php
-namespace Iayoo\monolog\mysql;
+namespace Iayoo\MysqlLogger\monolog\mysql;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
