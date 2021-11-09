@@ -4,12 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-dump("调用了vendor的CreateSystemErrorLogs");
-$array = debug_backtrace();
-foreach ($array as $row) {
-    dump($row['file'] . ':' . $row['line'] . '行,调用方法:' . $row['function']);
-}
-class CreateSystemErrorLogs extends Migration
+class CreateSystemErrorLog extends Migration
 {
     /**
      * Run the migrations.

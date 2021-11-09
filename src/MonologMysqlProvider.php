@@ -22,9 +22,9 @@ class MonologMysqlProvider extends ServiceProvider
     {
         if (app()->runningInConsole()) {
             $this->registerMigrations();
-            $this->publishes([
-                __DIR__ . '/../database/migrations' => database_path('migrations'),
-            ], 'iayoo-mysql-migrations');
+//            $this->publishes([
+//                __DIR__ . '/../database/migrations' => database_path('migrations'),
+//            ], 'iayoo-mysql-migrations');
         }
 
 //        return $this->loadMigrationsFrom(__DIR__.'/../../../migrations');
@@ -49,7 +49,7 @@ class MonologMysqlProvider extends ServiceProvider
      */
     public function register()
     {
-        
+
     }
 
     /**
