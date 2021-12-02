@@ -37,4 +37,8 @@ class MysqlHandler extends AbstractProcessingHandler
         ];
         self::$logId = DB::connection($this->connection)->table($this->table)->insertGetId($data);
     }
+
+    public function getLogId(){
+        return self::$logId;
+    }
 }
