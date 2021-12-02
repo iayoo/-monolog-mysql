@@ -4,7 +4,7 @@
 namespace Iayoo\MysqlLogger\monolog\mysql;
 
 use Exception;
-use Monolog\Logger;
+//use Monolog\Logger;
 
 class Log
 {
