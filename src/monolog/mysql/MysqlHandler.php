@@ -24,6 +24,7 @@ class MysqlHandler extends AbstractProcessingHandler
     {
         $data = [
             'instance'    => gethostname(),
+            'error_src'   => env('DB_LOG_SRC', 1),
             'message'     => $record['message'],
             'channel'     => $record['channel'],
             'level'       => $record['level'],

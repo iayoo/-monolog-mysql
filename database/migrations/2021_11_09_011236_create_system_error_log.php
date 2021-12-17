@@ -27,9 +27,10 @@ class CreateSystemErrorLog extends Migration
 
                 $table->longText('message');
                 $table->longText('context');
+                $table->tinyInt('error_src');
 
 
-                $table->integer('remote_addr')->nullable()->unsigned();
+                $table->string('remote_addr')->nullable()->unsigned();
                 $table->string('user_agent')->nullable();
                 $table->integer('created_by')->nullable()->index();
 
